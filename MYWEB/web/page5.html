@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>写信给我</title>
+    <style>
+        *{
+
+        margin: 0;
+
+        padding: 0;
+
+        text-decoration: none;
+
+        list-style: none;
+
+        }
+
+        .main{
+
+        max-width: 800px;/* 让整个网页只有800宽 */
+
+        margin: auto;/* 让它水平居中 */
+
+        }
+
+        .header,.nav,.container,.footer{
+
+        /* 这四个盒子都要左浮动 */
+
+        float: left;
+
+        /* 让它们满浏览器 */
+
+        width: 100%;
+
+        /* 内边距会影响整个盒子的实际大小，这里有一种方法可以处理，让它不影响 */
+
+        box-sizing: border-box;/* 就是这句 */
+
+        }
+
+        .header{
+
+        background: #54ec99;
+
+        padding: 20px;
+
+        text-align: center;
+
+        }
+
+        .nav{
+
+        background: #333;
+
+        }
+
+        .nav a{
+
+        color: #fff;
+
+        padding: 10px 20px;
+
+        display: inline-block;/* 让链接以块的形式显示 */
+
+        }
+
+        .nav a:hover{
+
+        background: #bbb;
+
+        color: #000;
+
+        }
+
+        /* 我们让左右两边都固定宽度200 */
+
+        .lside{
+
+        width: 200px;
+        background:white;
+    
+
+        float: left;
+
+        }
+
+        .rside{
+
+        width: 200px;
+
+
+        float: right;
+
+        }
+
+        /* 所以中间栏要加左右边距 */
+
+        .content{
+
+        margin: 0px 205px;
+
+        }
+
+        .lside,.rside,.content{
+
+        padding: 5px;
+
+        box-sizing: border-box;/* 去掉内边距影响 */
+
+        }
+
+        .footer{
+
+        padding: 10px;
+
+        background:black;
+
+        text-align: center;
+
+        }
+        
+        .bq{
+            color:#fff
+        }
+        /* 最后加个功能，当浏览宽度小于700时，三个栏进行竖排 */
+
+        @media screen and (max-width:700px) {
+
+        .lside,.rside,.content{
+
+        width: 100%;
+
+        margin: 0px;
+
+        }
+
+        }        
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="header">
+            <h1>小小的家</h1><br>
+            <img src="..\images\logo.jpg">
+        </div>
+        <div class="nav">
+            <a href="index.html">首页</a>
+            <a href="page1.html">个人简介</a>
+            <a href="page2.html">动画作品</a>
+            <a href="page3.html">我的相册</a>
+            <a href="page4.html">学习心得</a>
+            <a href="page5.html">写信给我</a>            
+        </div>
+        <div class="container">
+            <div class="lside">
+                <h2>QQ</h2>
+                <p>2075402911</p>
+            </div>
+            <div class="rside">
+                <h2>QQ邮箱</h2>
+                <p>
+                    2075402911@qq.com
+                </p>
+            </div>
+            <div class="content">
+                <h2>工作邮箱</h2>
+                <p>
+                    u202414771@hust.edu.cn
+                </p>
+            </div>
+        </div>
+        <div class="footer">
+            <p>
+                <span class="bq">更新时间:2024年12月5日 星期四 Copyright © 2024 zby版权所有</span>
+            </p>
+        </div>
+    </div>
+</body>
+</html>
